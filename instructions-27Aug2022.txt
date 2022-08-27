@@ -1,0 +1,18 @@
+Todays Agenda (40Min )
+
+1. How to check if mongodb Service is running in background? 10MIN
+2. How to create timestamp fields in mongodb document? 10Min
+		2.1 Create timestamp
+		2.2 Update timestamp
+3. User Registration/Signup with JWT Token?   20MIN
+
+
+Why JWT is used?
+To authenticate users
+
+JWT = JSON WEb TOKEN (Secret Key)
+
+	3.1 Check if the user is already registered
+	3.2 If not registered before then insert the user info in mongodb.
+	3.3 Generate the JWT token and give this token in api response.
+			
