@@ -18,9 +18,9 @@ let registerController = (req,res)=>{
             
 
             console.log(req.body.password_hash);
-            //const saltRounds = 10;
-            //let encryptedpassword = bcrypt.hashSync(req.body.password_hash, saltRounds);;
-            //req.body.password_hash = encryptedpassword;
+            const saltRounds = 10;
+            let encryptedpassword = bcrypt.hashSync(req.body.password_hash, saltRounds);;
+            req.body.password_hash = encryptedpassword;
 
             //3.2 If not registered before then insert the user info in mongodb.
             const user = new User(req.body);

@@ -1,0 +1,19 @@
+Todays Agenda 40Min
+
+Login System with Node/Express MongoDB
+
+JSON Web token
+JWT is used in SSO now a day
+
+Authentication (Auth)
+a. Registration
+b. Login
+
+1. Recive the username/email and password from client.
+2. Check if the username/email is available in db
+3. 
+	3.1 If availabe Say "User Exits We can give the token"
+	3.2 If no availabe 
+		3.2.1 Compare the password hash with db hash
+		3.2.2 You may also check the role
+		3.2.3 Give the JWT Token to user
