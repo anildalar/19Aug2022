@@ -9,9 +9,8 @@ let loginController = (req,res,)=>{
     //1. Recive the username/email and password from client.
     console.log(req.body)
 
-    const { email,password } = req.body // Destructuring
-    console.log(email)
-    console.log(password)
+    const { email,password_hash } = req.body // Destructuring
+    
 
     //2. Check if the username/email is available in db
     //Adventure.findOne({ country: 'Croatia' }, function (err, adventure) {});
@@ -24,19 +23,26 @@ let loginController = (req,res,)=>{
 
             //3.1 Lets access the existing db hash
 
-            console.log(user.password_hash)
+            console.log(user.password_hash);
 
-            bcrypt.compare(password, user.password_hash, function(err, result) {
-            
-                //OK it okay
-
-                res.status(200).json({
-                    msg:"Login Success",
-                    data:user,
-                    token: jwt.sign(req.body,process.env.JWT_TOKEN)
+            //bcrypt.compareSync(myPlaintextPassword, hash); // true
+            if(bcrypt.compareSync(password_hash, user.password_hash)){
+                //True
+                 //OK it okay
+                 console.log(user.email)
+                 res.status(200).json({
+                     msg:"Login Success",
+                     data:user,
+                     token: jwt.sign({user:user.email},process.env.JWT_TOKEN, {
+                         expiresIn: "1d",
+                     })
+                 });
+            }else{  
+                //False
+                res.status(404).json({
+                    msg:'Invalid credentials'
                 });
-            });
-
+            }
             
         }else{
             res.status(404).json({

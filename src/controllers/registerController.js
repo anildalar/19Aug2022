@@ -29,7 +29,8 @@ let registerController = (req,res)=>{
 
                 //3.3.1  Generate the JWT token
                 //object.method();
-                var token = jwt.sign(req.body,process.env.JWT_TOKEN);   
+                console.log(user.email);
+                var token = jwt.sign({user:user.email},process.env.JWT_TOKEN);   
                 res.status(200).json({
                     msg:'User registed successfully',
                     token:token

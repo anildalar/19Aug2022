@@ -17,3 +17,14 @@ b. Login
 		3.2.1 Compare the password hash with db hash
 		3.2.2 You may also check the role
 		3.2.3 Give the JWT Token to user
+
+
+						Biggest Mistake I Did Yesterday
+
+
+
+
+
+
+
+
