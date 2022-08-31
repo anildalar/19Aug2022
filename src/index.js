@@ -5,12 +5,14 @@ env.config();
 
 const { registerRoute } = require('./routes/register')
 const { loginRoute } = require('./routes/login')
+const { teacherRoute } = require('./routes/teacher')
 
 
 
 app.use(express.json());
 app.use('/api',registerRoute);
 app.use('/api',loginRoute);
+app.use('/api',teacherRoute);
 
 let port = process.env.PORT;
 app.listen(port,()=>{

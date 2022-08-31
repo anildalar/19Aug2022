@@ -39,13 +39,13 @@ let loginController = (req,res,)=>{
                  });
             }else{  
                 //False
-                res.status(404).json({
+                res.status(403).json({
                     msg:'Invalid credentials'
                 });
             }
             
         }else{
-            res.status(404).json({
+            res.status(403).json({
                 msg:'Invalid credentials'
             });
         }

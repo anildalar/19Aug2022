@@ -1,0 +1,19 @@
+Process of JWT
+1. Registration
+2. Login
+				If login is success then You will get JWT
+
+3. You will make a request with JWT
+			If you want to perform any action(CRUD). YOu have 			to send the JWT token
+
+4. We have to verify the token
+		If the token is valid and not expired then you can perform action
+
+Eg. Lets save some teacher information
+
+		You have send teacher information along with JWT token
+
+
+HTTP Status code
+403 = Unauthorized
+404 = Not Found
