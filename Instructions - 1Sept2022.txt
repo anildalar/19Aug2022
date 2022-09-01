@@ -7,6 +7,19 @@ Need to register User with Role
 Role based Routes
 Role based Authentication
 
+Lets consider OKLABS is EdTech Company
+
 http://localhost:5000/admin/someroute
 http://localhost:5000/teacher/someroute 
 http://localhost:5000/student/someroute
+
+enum data type
+
+Enuminated Data types
+Gender
+1. Male
+2. Female
+3. Transgender
+
+
+We will have one user registion route
