@@ -3,7 +3,9 @@
 //JS HOF
 let teacherController = (req,res)=>{
     res.status(200).json({
-        msg:"ok"
+        msg:"ok",
+        myemail:req.email,
+        myrole:req.role
     });
 }
 

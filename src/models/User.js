@@ -10,7 +10,11 @@ let userSchema = new mongoose.Schema({   //JS Object
         required:true
     },
     password_hash:String,
-    role: String
+    role: {
+        type:String,
+        enum:['admin','teacher','student'],
+        default:"student"
+    }
  },{
     timestamps: true,
     toJSON: { virtuals: true },

@@ -1,0 +1,12 @@
+JS Foundation Day 43 
+Role Based Routes and Authentication
+
+Need to register User with Role
+
+
+Role based Routes
+Role based Authentication
+
+http://localhost:5000/admin/someroute
+http://localhost:5000/teacher/someroute 
+http://localhost:5000/student/someroute
