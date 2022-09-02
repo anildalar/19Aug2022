@@ -5,7 +5,7 @@ env.config();
 
 const { registerRoute } = require('./routes/register')
 const { loginRoute } = require('./routes/login')
-const { teacherRoute } = require('./routes/teacher')
+const { teacherRoute } = require('./routes/teacher/teacher')
 
 
 
