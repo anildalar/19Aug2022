@@ -1,4 +1,4 @@
-JS Foundation Day 43 
+JS Foundation Day 44 Part 2
 Role Based Routes and Authentication
 
 Need to register User with Role
@@ -23,3 +23,42 @@ Gender
 
 
 We will have one user registion route
+
+
+User Authentication
+
+JWT
+header.payload.signature
+
+19Aug.
+
+Lets disccuss our useCases
+
+What admin can do ?
+
+1. Create another admin
+2. Teachers
+3. Students
+
+
+What Teachers can do ?
+1. Can't create admin
+2. Can't create another teacher
+3. Can create student
+
+What Student can do ?
+
+1. Can't Create anoteer students
+2. They only have view permission
+
+
+Student Token
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYW5pbDRAZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE2NjIwODg4ODYsImV4cCI6MTY2MjE3NTI4Nn0.aPm8RN7Qoj95EFAaMrs-JTikYO4n3nIDZQS0zSFnXvs
+
+Admin Token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYW5pbDVAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjYyMDg5MTg4LCJleHAiOjE2NjIxNzU1ODh9.mBiPwjy-hpUzKickfBiW-uGQ1BMcq1jEbVeyFlhLRIY
+
+Teacher Token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYW5pbDZAZ21haWwuY29tIiwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE2NjIwODk5OTMsImV4cCI6MTY2MjE3NjM5M30.ooFPNrPx6BTHLcE28VIER0tUMXwqw2vs7-lPmKkE2m8
+
